@@ -1,0 +1,41 @@
+@use '../../../styles/colors.module.scss'as c;
+
+.event-container {
+    width           : 100%;
+    height          : 300px;
+    background-color: c.$white-0;
+    border          : 4px solid c.$primary-500;
+    box-shadow      : c.$box-shadow-black-900;
+    border-radius   : 50px;
+
+    &__information {
+        height: 80%;
+    }
+}
+
+.image-container {
+    display        : flex;
+    justify-content: center;
+    width          : 100%;
+    margin-top     : 2%;
+}
+
+.image {
+    width : 32px;
+    height: 32px;
+}
+
+.header,
+.date,
+.title,
+.body {
+    margin    : 2% 4%;
+    text-align: center;
+}
+
+.button-container {
+    display        : flex;
+    justify-content: center;
+    width          : 100%;
+    height         : 40px;
+}

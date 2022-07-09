@@ -1,0 +1,53 @@
+@use '../../../styles/colors.module.scss'as c;
+
+.container {
+    background-color: c.$white-0;
+    border          : 4px solid c.$primary-500;
+    box-shadow      : c.$box-shadow-black-900;
+    border-radius   : 50px;
+
+    &--big {
+        width : 426px;
+        height: 440px;
+    }
+
+    &--small {
+        width : 260px;
+        height: 300px;
+    }
+
+
+    &__information {
+        height  : 85%;
+        overflow: hidden;
+    }
+
+    &__button {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        width          : 100%;
+        height         : 15%;
+
+    }
+
+    &__image {
+        display                : flex;
+        justify-content        : center;
+        margin-bottom          : 2px;
+        overflow               : hidden;
+        border-top-left-radius : 47px;
+        border-top-right-radius: 47px;
+    }
+
+}
+
+.title {
+    margin    : 0px 16px;
+    text-align: center;
+}
+
+.body {
+    margin    : 8px 16px;
+    text-align: center;
+}

@@ -1,0 +1,97 @@
+@use '../../styles/colors.module.scss'as c;
+
+@mixin paragraph-style($font-size:0, $line-height:0) {
+    font-family: 'Nunito Sans';
+    font-style : normal;
+    font-weight: 700;
+    color      : c.$gray-700;
+
+    @if $font-size {
+        font-size: $font-size;
+    }
+
+    @if $line-height {
+        line-height: $line-height;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'header header form form'
+        'contacts illustration form form'
+        'media . form form';
+    align-items : center;
+    height      : calc(100vh - 110px);
+    margin-left : 60px;
+    margin-right: 60px;
+    overflow-y: scroll;
+}
+
+.container__contacts {
+    grid-area : contacts;
+    margin-top: 54px;
+}
+
+.container__contact {
+    display: flex;
+
+    &>p {
+        @include paragraph-style (24px, 32px);
+        margin-left: 16px;
+    }
+}
+
+.container__social-media {
+    grid-area    : media;
+    position     : absolute;
+    bottom       : 0;
+    margin-top   : 54px;
+    margin-bottom: 24px;
+}
+
+.header {
+    grid-area: header;
+
+    &__title {
+        @include paragraph-style (48px, 36px);
+        margin: 16px 0px 16px 16px;
+    }
+
+    &__body {
+        @include paragraph-style (24px, 32px);
+        margin: 16px 0px 16px 16px;
+    }
+}
+
+.social-media__header {
+    @include paragraph-style (24px, 32px);
+    margin: 16px 0px 16px 16px;
+}
+
+.container__social-media-links {
+    display    : flex;
+    margin-left: 16px;
+}
+
+.social-media {
+    margin-right: 32px;
+}
+
+.container__illustration {
+    grid-area   : illustration;
+    position    : absolute;
+    margin-left : auto;
+    margin-right: auto;
+    width       : calc(100vh - 240px);
+    max-width   : 580px;
+    left        : 0;
+    right       : 120px;
+    bottom      : 40px;
+
+    @media (min-width:1640px) {
+        width : calc(100vh - 300px);
+        bottom: unset;
+        right : -120px;
+    }
+}

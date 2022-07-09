@@ -1,0 +1,90 @@
+@use '../../styles/colors.module.scss'as c;
+
+.container {
+    grid-area       : form;
+    justify-self    : right;
+    width           : 520px;
+    min-height      : 580px;
+    background-color: c.$white-0;
+    border          : 4px solid c.$primary-500;
+    box-shadow      : c.$box-shadow-black-900;
+    border-radius   : 50px;
+    height          : fit-content;
+    margin          : 10px 0px;
+
+    @media (max-width:440px) {
+        height    : fit-content;
+        width     : 100vh;
+        margin    : 0;
+        margin-top: 40vh;
+    }
+
+    h2 {
+        font-style : normal;
+        font-weight: 700;
+        color      : c.$gray-800;
+        font-size  : 1.5rem;
+        margin     : 0px 20% 16px 20%;
+    }
+
+    textarea {
+        background-color: c.$gray-100;
+        border-radius   : 8px;
+        margin          : 0 20%;
+        width           : 60%;
+
+    }
+
+}
+
+.container__name {
+    margin-top: 16px;
+}
+
+.container__email {
+    margin-top: 20px;
+}
+
+.container__message {
+    margin-top: 20px;
+}
+
+.p {
+    &--center {
+        font-style : normal;
+        font-weight: 700;
+        font-size  : 1.5rem;
+        line-height: 2rem;
+        color      : c.$gray-300;
+        margin     : 0px 20% 4% 20%;
+        text-align : center;
+    }
+
+    &--right {
+        text-align     : right;
+        margin-right   : 20%;
+        margin-top     : -2%;
+        color          : c.$primary-500;
+        font-weight    : 600;
+        text-decoration: underline;
+    }
+
+    &--left {
+        font-weight: 500;
+        font-size  : 1rem;
+        margin-left: 20%;
+
+        &__error {
+            color      : c.$red-500;
+            font-weight: 600;
+            margin     : 0 20%;
+        }
+
+        &__success {
+            color      : c.$primary-500;
+            font-weight: 800;
+            margin     : 0 20%;
+        }
+    }
+
+}

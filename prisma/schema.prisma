@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  email      String @unique
+  password   String?
+  username   String @unique
+  avatarLink String
+}
+
+model NewsTopHeadline {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  articleLink      String
+  imageLink        String
+  title            String
+  body             String?
+  scrapedTimestamp DateTime
+}
+
+model LatestArticle {
+  id                       String   @id @default(auto()) @map("_id") @db.ObjectId
+  articleLink              String
+  imageLink                String
+  title                    String
+  uploadedArticleTimestamp String
+  author                   String
+  scrapedTimestamp         DateTime
+}
+
+model CryptoEvent {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  cryptoImgSource  String
+  header           String
+  date             String
+  title            String
+  body             String
+  sourceLink       String
+  scrapedTimestamp DateTime
+}
+
+model EarningsCalendar {
+  id                       String   @id @default(auto()) @map("_id") @db.ObjectId
+  symbolEarnings           String
+  companyEarnings          String
+  earningsCallTimeEarnings String
+  EPSEstimateEarnings      String
+  reportedEPSEarnings      String
+  surpriseEarnings         String
+  dateEarnings             DateTime
+}
+
+model EconomicEventsCalendar {
+  id                       String   @id @default(auto()) @map("_id") @db.ObjectId
+  eventEconomicEvent       String
+  countryEconomicEvent     String
+  forEconomicEvent         String
+  reportedEconomicEvent    String
+  expectationEconomicEvent String
+  priorToThisEconomicEvent String
+  eventTimeEconomicEvent   String
+  dateEconomicEvent        DateTime
+}
+
+model IPOsCalendar {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  symbolIPOs   String
+  companyIPOs  String
+  exchangeIPOs String
+  dateIPOs     DateTime
+}

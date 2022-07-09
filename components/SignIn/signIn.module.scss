@@ -1,0 +1,118 @@
+@use '../../styles/colors.module.scss'as c;
+
+.container {
+    position        : absolute;
+    width           : 600px;
+    min-height      : 570px;
+    height          : fit-content;
+    margin          : 1% 4% 4% 54%;
+    background-color: c.$white-0;
+    border          : 4px solid c.$primary-500;
+    border-radius   : 50px;
+    box-shadow      : c.$box-shadow-black-900;
+
+    @media (max-width:440px) {
+        height    : fit-content;
+        width     : 100vh;
+        margin    : 0;
+        margin-top: 40vh;
+    }
+
+}
+
+.background-image-container {
+    position : absolute;
+    left     : 1.72%;
+    right    : 47.55%;
+    top      : 4.81%;
+    bottom   : 4.91%;
+    width    : 44vw;
+    min-width: 620px;
+
+    @media (max-width:440px) {
+        margin: 0;
+    }
+
+    &--sign-up {
+        left: 10%;
+    }
+}
+
+.title {
+    font-style     : normal;
+    font-weight    : 700;
+    font-size      : 3.5rem;
+    line-height    : 5rem;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    color          : c.$gray-800;
+    text-shadow    : c.$text-shadow-black-900;
+    margin-top     : 2%;
+    margin-bottom  : -2%;
+}
+
+.providers {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    column-gap     : 4%;
+    margin         : 4% 20% 2% 20%;
+
+}
+
+.p {
+    &--center {
+        font-style : normal;
+        font-weight: 700;
+        font-size  : 1.5rem;
+        line-height: 2rem;
+        color      : c.$gray-300;
+        margin     : 0px 20% 4% 20%;
+        text-align : center;
+    }
+
+    &--right {
+        text-align     : right;
+        margin-right   : 20%;
+        margin-top     : -2%;
+        color          : c.$primary-500;
+        font-weight    : 600;
+        text-decoration: underline;
+    }
+
+    &--left {
+        font-weight: 500;
+        font-size  : 1rem;
+        margin-left: 20%;
+
+        &>* {
+            color          : c.$primary-500;
+            font-weight    : 600;
+            text-decoration: underline;
+        }
+
+        &__error {
+            color      : c.$red-500;
+            font-weight: 600;
+            margin     : 0 20%;
+        }
+
+        &__success {
+            color      : c.$primary-500;
+            font-weight: 800;
+            margin     : 0 20%;
+        }
+
+        @media (max-width:440px) {
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+.provider {
+    cursor    : pointer;
+    border    : 0;
+    background: c.$white-0;
+}

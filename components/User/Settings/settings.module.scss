@@ -1,0 +1,59 @@
+@use '../../../styles/colors.module.scss'as c;
+
+.container {
+    overflow-y: scroll;
+    width     : 100%;
+    height    : 85vh;
+
+    &--form {
+        width           : 50vw;
+        min-width       : 680px;
+        margin          : 24px auto;
+        background-color: c.$white-0;
+        border          : 4px solid c.$primary-500;
+        box-shadow      : c.$box-shadow-black-900;
+        border-radius   : 50px;
+        height          : fit-content;
+    }
+
+    &--button {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+    }
+}
+
+.title {
+    font-style : normal;
+    font-weight: 700;
+    color      : c.$gray-800;
+}
+
+.text {
+    margin: 0 20%;
+
+    &--center {
+        text-align: center;
+    }
+
+    &--left {
+        text-align: left;
+    }
+
+    &--red {
+        color: c.$red-500;
+    }
+
+    &--green {
+        color: c.$primary-700;
+    }
+}
+
+.message {
+    margin-top: 0px;
+}
+
+.hr {
+    width: 80%;
+    color: c.$gray-700;
+}

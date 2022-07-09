@@ -1,0 +1,59 @@
+@use '../../../styles/colors.module.scss'as c;
+
+.button {
+    cursor       : pointer;
+    height       : 2.5rem;
+    border       : 1px solid c.$black-0;
+    border-radius: 1rem;
+    font-weight  : 600;
+    font-size    : 1.2rem;
+
+    &--primary {
+        width           : 60%;
+        height          : 2.5rem;
+        margin          : 4% 20% 0 20%;
+        font-size       : 1rem;
+        background-color: c.$primary-500;
+        color           : c.$white-0;
+
+        &--small {
+            width           : 36%;
+            height          : 2.5rem;
+            font-size       : 1rem;
+            background-color: c.$primary-500;
+            color           : c.$white-0;
+        }
+
+        &--big {
+            width           : 60%;
+            height          : 2.5rem;
+            background-color: c.$primary-500;
+            color           : c.$white-0;
+            margin-bottom   : 16px;
+        }
+    }
+
+    &--secondary {
+        &--small {
+            width    : 36%;
+            height   : 2.5rem;
+            font-size: 1rem;
+        }
+    }
+
+
+    &--small-card {
+        width           : 120px;
+        height          : 30px;
+        margin          : 8% 0%;
+        font-size       : 16px;
+        background-color: c.$primary-500;
+        color           : c.$white-0;
+    }
+
+    @media (max-width:440px) {
+        height   : 48px;
+        font-size: 1.5rem
+    }
+
+}

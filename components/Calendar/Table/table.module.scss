@@ -1,0 +1,152 @@
+@use '../../../styles/colors.module.scss'as c;
+
+
+.container {
+
+    min-width: 760px;
+
+    &__main {
+        margin: 8px 60px;
+    }
+
+    &__table {
+        width        : 100%;
+        height       : calc(100vh - 260px);
+        border       : 4px solid c.$primary-500;
+        box-shadow   : -5px 4px 16px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+
+        @media (max-width:440px) {
+            width: 760px;
+        }
+    }
+
+
+}
+
+.table {
+    width: 100%;
+}
+
+.tr {
+    width          : 100%;
+    display        : flex;
+    justify-content: space-around;
+    border-bottom  : 1px solid black;
+
+    &--tbody {
+        &:hover {
+            background-color: c.$gray-200;
+        }
+    }
+}
+
+.th,
+.td {
+    font-size  : 16px;
+    line-height: 40px;
+
+    // Earnings calendar
+    &--symbol__earnings-calendar {
+        width       : 12%;
+        padding-left: 3%;
+    }
+
+    &--company__earnings-calendar {
+        width: 17%;
+    }
+
+    &--earnings-call-time__earnings-calendar {
+        width: 19%;
+    }
+
+    &--eps-estimate__earnings-calendar {
+        width: 15%;
+    }
+
+    &--reported-eps__earnings-calendar {
+        width: 16%;
+    }
+
+    &--surprise__earnings-calendar {
+        width: 10%;
+    }
+
+    &--date__earnings-calendar {
+        width     : auto;
+        text-align: center;
+    }
+
+    // IPOs calendar
+    &--symbol__ipos-calendar {
+        width       : 35%;
+        padding-left: 10%;
+    }
+
+    &--company__ipos-calendar {
+        width: 26%;
+    }
+
+    &--exchange__ipos-calendar {
+        width: 19%;
+    }
+
+    &--date__ipos-calendar {
+        width     : auto;
+        text-align: center;
+    }
+
+    // Economic Events calendar
+    &--event__economic-event-calendar {
+        width       : 14.5%;
+        padding-left: 3.5%;
+    }
+
+    &--country__economic-event-calendar {
+        width: 12.5%;
+    }
+
+    &--for__economic-event-calendar {
+        width: 9.5%;
+    }
+
+    &--reported__economic-event-calendar {
+        width: 13.5%;
+    }
+
+    &--expectation__economic-event-calendar {
+        width: 14.5%;
+    }
+
+    &--prior-to-this__economic-event-calendar {
+        width: 14.5%;
+    }
+
+    &--event-time__economic-event-calendar {
+        width: 13.5%;
+    }
+
+    &--date__economic-event-calendar {
+        width     : auto;
+        text-align: center;
+    }
+}
+
+.tbody {
+    display : inline-block;
+    width   : 100%;
+    height  : calc(100vh - 322px);
+    overflow: auto;
+
+    @media (max-width:440px) {
+        height: calc(100vh - 440px);
+    }
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}

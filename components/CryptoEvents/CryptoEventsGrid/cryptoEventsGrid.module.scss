@@ -1,0 +1,11 @@
+.container {
+    display              : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap             : 40px;
+    padding              : 0px 60px;
+    justify-content      : space-between;
+    justify-items        : center;
+    align-content        : space-between;
+    width                : 100%;
+    height               : calc(100vh - 188px);
+}

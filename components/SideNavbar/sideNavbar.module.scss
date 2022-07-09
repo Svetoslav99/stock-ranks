@@ -1,0 +1,159 @@
+@use '../../styles/colors.module.scss'as c;
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap');
+
+.logo_container {
+    margin-top: 4px;
+}
+
+.list {
+    padding-top   : 16px;
+    padding-bottom: 16px;
+}
+
+.sidebar {
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+    height    : 100%;
+    width     : 260px;
+    min-height: 580px;
+    background: c.$primary-800; //#338B1F;
+    z-index   : 100;
+    transition: all 0.5s ease;
+}
+
+.sidebar__link {
+    width : 100%;
+    cursor: pointer;
+}
+
+.sidebar__link-content {
+    display    : flex;
+    margin-left: 16px;
+}
+
+.sidebar__text {
+    color      : c.$white-0;
+    margin-left: 8px;
+    font-size  : 16px;
+}
+
+.hr {
+    width: 90%;
+
+    &--centered {
+        text-align: center;
+    }
+}
+
+.contact_us_container {
+    position: absolute !important;
+    bottom  : 32px;
+    width   : 100%;
+
+    @media screen and (max-width:440px) {
+        position: static !important;
+    }
+}
+
+/* END OF UTILS*/
+
+.sidebar.close {
+    width: 160px;
+}
+
+.sidebar.close .logo-details .logo_name {
+    transition-delay: 0s;
+    opacity         : 0;
+    pointer-events  : none;
+}
+
+.sidebar .nav-links {
+    height  : 100%;
+    padding : 32px 0 160px 0;
+    overflow: auto;
+}
+
+.sidebar.close .nav-links {
+    overflow: visible;
+
+    @media screen and (max-width:440px) {
+        overflow: hidden;
+    }
+}
+
+.sidebar .nav-links li {
+    position  : relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar__link:hover {
+    background: c.$primary-700;
+}
+
+.sidebar .nav-links li a {
+    display        : flex;
+    align-items    : center;
+    text-decoration: none;
+}
+
+.sidebar .nav-links li .sub-menu {
+    padding   : 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: c.$primary-700;
+    display   : none;
+}
+
+.sidebar .nav-links li .sub-menu a {
+    color      : c.$white-0;
+    font-size  : 16px;
+    padding    : 4px 0;
+    white-space: nowrap;
+    opacity    : 0.6;
+    transition : all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover {
+    opacity: 1;
+}
+
+.sidebar.close .nav-links li .sub-menu {
+    position      : absolute;
+    left          : 100%;
+    top           : -10px;
+    margin-top    : 0;
+    padding       : 10px 20px;
+    border-radius : 0 6px 6px 0;
+    opacity       : 0;
+    display       : block;
+    pointer-events: none;
+    transition    : 0s;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu {
+    top           : 0;
+    opacity       : 1;
+    pointer-events: auto;
+    transition    : all 0.4s ease;
+}
+
+.sidebar .nav-links li .sub-menu .link_name {
+    display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name {
+    margin   : 8px;
+    color    : c.$white-0;
+    font-size: 16px;
+    opacity  : 1;
+    display  : block;
+}
+
+@media (max-width: 440px) {
+
+    .sidebar.close {
+        width: 0;
+    }
+}

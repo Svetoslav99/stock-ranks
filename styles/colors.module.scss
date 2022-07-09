@@ -1,0 +1,27 @@
+$white-0    : hsl(0, 0%, 100%);
+$gray-100   : hsl(0, 0%, 94%);
+$gray-150   : hsl(0, 0%, 90%);
+$gray-200   : hsl(0, 0%, 88%);
+$gray-300   : hsl(300, 1%, 76%);
+$gray-500   :hsl(0, 0%, 65%);
+$gray-700   : hsl(0, 0%, 33%);
+$gray-800   : hsl(0, 0%, 28%);
+$black-0    : hsl(0, 0%, 0%);
+$black-900  : hsla(0, 0%, 13%, 0.25);
+$primary-500: hsl(109, 67%, 41%);
+$primary-700: hsl(109, 64%, 33%);
+$primary-800: hsl(109, 63%, 25%);
+$red-500    : hsl(0, 100%, 45%);
+
+$box-shadow-black-700: 0 1px 2px 0 hsla(197, 31%, 20%, 0.21);
+$text-shadow-black-900: 0px 4px 4px hsla(0, 0%, 0%, 0.25);
+$box-shadow-black-900:-5px 4px 16px hsla(0, 0%, 0%, 0.5);
+$box-shadow-blue-500:1px solid hsl(214, 100%, 62%);
+// :export {
+//     primary500         : $primary-500;
+//     primary700         : $primary-700;
+//     primary-800        : $primary-800;
+//     bodyBackgroundColor: $gray-100;
+//     gray800            : $gray-800;
+//     gray300            : $gray-300;
+// }

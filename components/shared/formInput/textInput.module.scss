@@ -1,0 +1,51 @@
+@use '../../../styles/colors.module.scss'as c;
+
+.input {
+    margin      : 2% 20% 2% 20%;
+    outline     : 0;
+    border-width: 0 0 1px;
+    border-color: c.$gray-300;
+    width       : 100%;
+    max-width   : 60%;
+    height      : 32px;
+    font-size   : 24px;
+
+    &__label {
+        font-style : normal;
+        font-weight: 700;
+        color      : c.$gray-800;
+        font-size  : 1.5rem;
+    }
+
+    &::placeholder {
+        color      : c.$gray-300;
+        font-size  : 24px;
+        line-height: 30px;
+    }
+}
+
+.error {
+    color : c.$red-500;
+    margin: 1% 20%;
+}
+
+.password-button {
+    border          : none;
+    background-color: transparent;
+    margin          : -30%;
+}
+
+.icon {
+    display: block;
+    height : 46px;
+    width  : 46px;
+
+    &__password-shown {
+        background: url('../../../public/icons/48/password-eye.svg');
+    }
+
+    &__password-not-shown {
+        background: url('../../../public/icons/48/password-eye-closed.svg');
+    }
+
+}
